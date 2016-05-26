@@ -32,6 +32,7 @@ import javax.management.NotificationListener;
 import javax.management.openmbean.CompositeData;
 import javax.management.openmbean.OpenDataException;
 import javax.management.openmbean.TabularData;
+import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 import java.net.InetAddress;
@@ -262,6 +263,11 @@ class TestObjectFactory implements ObjectFactory {
             return CompactionManager.AllSSTableOpStatus.SUCCESSFUL.statusCode;
         }
 
+        @Override
+        public int forceKeyspaceCleanup(int i, String s, String... strings) throws IOException, ExecutionException, InterruptedException {
+            throw new UnsupportedOperationException();
+        }
+
         //
 
         @Override
@@ -335,6 +341,16 @@ class TestObjectFactory implements ObjectFactory {
         }
 
         @Override
+        public Map<String, String> getEndpointToHostId() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public Map<String, String> getHostIdToEndpoint() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
         public double getLoad() {
             throw new UnsupportedOperationException();
         }
@@ -375,6 +391,11 @@ class TestObjectFactory implements ObjectFactory {
         }
 
         @Override
+        public void takeMultipleColumnFamilySnapshot(String s, String... strings) throws IOException {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
         public void clearSnapshot(final String tag, final String... keyspaceNames) {
             throw new UnsupportedOperationException();
         }
@@ -390,12 +411,27 @@ class TestObjectFactory implements ObjectFactory {
         }
 
         @Override
+        public void refreshSizeEstimates() throws ExecutionException {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
         public void forceKeyspaceCompaction(final String keyspaceName, final String... columnFamilies) {
             throw new UnsupportedOperationException();
         }
 
         @Override
         public int scrub(final boolean disableSnapshot, final boolean skipCorrupted, final String keyspaceName, final String... columnFamilies) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public int scrub(boolean b, boolean b1, boolean b2, String s, String... strings) throws IOException, ExecutionException, InterruptedException {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public int scrub(boolean b, boolean b1, boolean b2, int i, String s, String... strings) throws IOException, ExecutionException, InterruptedException {
             throw new UnsupportedOperationException();
         }
 
@@ -671,6 +707,21 @@ class TestObjectFactory implements ObjectFactory {
 
         @Override
         public MBeanNotificationInfo[] getNotificationInfo() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public int getInterDCStreamThroughputMbPerSec() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void setInterDCStreamThroughputMbPerSec(int p) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public int upgradeSSTables(String keyspaceName, boolean excludeCurrentVersion, int jobs, String... columnFamilies) throws IOException, ExecutionException, InterruptedException {
             throw new UnsupportedOperationException();
         }
     }
@@ -1004,6 +1055,25 @@ class TestObjectFactory implements ObjectFactory {
 
         @Override
         public CompositeData finishLocalSampling(String sampler, int count) throws OpenDataException {
+            throw new UnsupportedOperationException();
+        }
+        @Override
+        public void setCompactionParameters(Map<String, String> options) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public Map<String, String> getCompactionParameters() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public String getCompactionParametersJson() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void setCompactionParametersJson(String s) {
             throw new UnsupportedOperationException();
         }
     }

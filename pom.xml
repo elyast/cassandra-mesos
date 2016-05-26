@@ -71,7 +71,7 @@
         <version.slf4j>1.7.10</version.slf4j>
         <version.joda>2.7</version.joda>
         <version.grizzly>2.16</version.grizzly>
-        <version.cassandra>2.1.4</version.cassandra>
+        <version.cassandra>2.1.14</version.cassandra>
 
         <version.grizzly>2.16</version.grizzly>
         <version.jackson>2.3.2</version.jackson> <!-- jackson is also transitively provided by grizzly! -->
@@ -305,7 +305,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>protoc-plugin</id>
-            <url>http://sergei-ivanov.github.com/maven-protoc-plugin/repo/releases/</url>
+            <url>https://dl.bintray.com/sergei-ivanov/maven</url>
         </pluginRepository>
     </pluginRepositories>
 

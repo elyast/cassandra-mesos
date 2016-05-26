@@ -90,7 +90,7 @@
                             <goal>wget</goal>
                         </goals>
                         <configuration>
-                            <url>https://downloads.mesosphere.io/cassandra-mesos/cassandra/apache-cassandra-${version.cassandra}-bin.tar.gz</url>
+                            <url>http://mirror.cc.columbia.edu/pub/software/apache/cassandra/${version.cassandra}/apache-cassandra-${version.cassandra}-bin.tar.gz</url>
                             <outputDirectory>${project.build.directory}/tarball</outputDirectory>
                         </configuration>
                     </execution>
